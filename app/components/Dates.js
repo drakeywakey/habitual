@@ -8,7 +8,7 @@ class Dates extends React.Component {
                 {
                     days.map((day) => {
                         let today = new Date((new Date()).setHours(-24 * day));
-                        return <span key={day}>{today.toDateString()}|||--|||</span>
+                        return <span key={day}>--|||{today.toDateString()}|||--</span>
                     })
                 }
             </div>

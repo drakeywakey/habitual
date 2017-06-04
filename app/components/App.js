@@ -1,17 +1,17 @@
 var React = require('react');
 
-var AddHabitForm = require('./AddHabitForm');
+var AddHabit = require('../containers/AddHabit');
 var Dates = require('./Dates');
-var HabitList = require('./HabitList');
+var VisibleHabitList = require('../containers/VisibleHabitList');
 var Link = require('./Link');
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                <AddHabitForm onSubmit={() => {}} />
+                <AddHabit />
                 <Dates />
-                <HabitList />
+                <VisibleHabitList />
                 <p>Show: <Link>All</Link> | <Link>Good</Link> | <Link>Bad</Link></p>
             </div>
         )
