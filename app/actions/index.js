@@ -8,3 +8,10 @@ export const addHabit = (text, good) => {
         good: good
     }
 }
+
+export const setVisFilter = (filter) => {
+    return {
+        type: 'SET_VIS_FILTER',
+        filter: filter
+    }
+}

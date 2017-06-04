@@ -1,13 +1,20 @@
 var React = require('React');
+var PropTypes = require('prop-types');
 
-class Link extends React.Component {
-    render() {
-        return (
-            <a href='#'>
-                {this.props.children}
-            </a>
-        )
+const Link = ({ active, children, onClick }) => {
+    if (active) {
+        return <span>{children}</span>
     }
+
+    return (
+        <a href="#"
+            onClick={ e => {
+                e.preventDefault();
+                onClick()
+            }}>
+            {children}
+            </a>
+    )
 }
 
 module.exports = Link;
