@@ -15,3 +15,11 @@ export const setVisFilter = (filter) => {
         filter: filter
     }
 }
+
+export const toggleHabitAtDate = (id, date) => {
+    return {
+        type: 'TOGGLE_HABIT_AT_DATE',
+        id: id,
+        date: date
+    }
+}

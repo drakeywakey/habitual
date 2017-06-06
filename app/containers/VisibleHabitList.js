@@ -1,5 +1,6 @@
 var connect = require('react-redux').connect;
 var HabitList = require('../components/HabitList');
+var toggleHabitAtDate = require('../actions').toggleHabitAtDate;
 
 const getVisibleHabits = (habits, filter) => {
     switch (filter) {
@@ -22,7 +23,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        onDateClick: (id, index) => {
+            dispatch(toggleHabitAtDate(id, index))
+        }
     }
 }
 
